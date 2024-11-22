@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dividir</title>
+    <style>
+        body{
+            font: normal 18pt Arial;
+        }
+        input{
+            font: normal 18pt Arial;
+            width: 100px;
+        }
+        div#res {
+            margin-top: 80px;/*cria margens*/
+        }
+    </style>
+</head>
+<body>
+    <h1>Dividindo os Valores</h1>
+    <input type="number" name="numerador" id="numerador">
+    <input type="number" name="denominador" id="denominador">
+    <input type="button" value="Dividir" onclick="dividir()">
+    <div id="res"></div>
+    <script>
+        function dividir(){
+            var num = document.getElementById('numerador')
+            var den = document.getElementById('denominador')
+            var res = document.getElementById('res')
+            var n1 = Number(num.value)
+            var n2 = Number(den.value)
+            var di = n1 / n2
+            res.innerHTML = `A divisão entre ${n1} e ${n2} é igual a ${di}`
+            
+        }
+    </script>
+
+</body>
+</html>
